@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>akk1to's redirection</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            -o-filter: blur(15px);
+            filter: blur(15px);
+        }
+
+        @media (min-width: 768px){
+            .bio {
+                display: flex;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 767px){
+            .bio-text {
+                margin-left: 0px;
+                margin-top: 0;
+                line-height: 10px;
+            }
+        }
+
+        .no-select {
+            user-select: none;
+        }
+        .error-box {
+            padding: 0.8em;
+            margin: 1em auto;
+            max-width: 600px;
+            border-left: 4px solid #9b7dff;
+            border-radius: 5px;
+            background-color: #9b7dff20;
+        }
+        .footer-text {
+            color: #6c757d;
+            font-size: 0.875rem;
+            margin-top: 2rem;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        a {
+            text-decoration: none;
+            transition: text-shadow 0.3s ease;
+        }
+        a:hover {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+        }
+    </style>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.shiftKey && event.key === 'C')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body class="text-white flex items-center justify-center min-h-screen no-select">
+    <video autoplay muted loop id="background">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    <div class="text-center content">
+        <img src="https://avatars.githubusercontent.com/u/98392115?v=4" alt="Logo" class="mx-auto mb-8 w-40 h-40 rounded-full no-select" ondragstart="return false;">
+        <p>akk1to.dev Redirect System</p>
+        <div class="text-4xl font-bold mb-4 text-[#ffffff]">You are going to be redirected</div>
+        <p id="time"></p>
+        <div class="error-box text-xl mb-4">You are connecting to: akk1to's CF tracker. Powered by Notion. <br>Copyright (2024 - future) akk1to.dev</div>
+        <div class="footer-text">
+            <p>This site was created by <strong>akk1to.dev</strong> in purpose to redirect user to the destination page.</p>
+            This site was made and being maintained by <strong>akk1to.dev</strong>. Visit the main page: <a href="https://akk1to.is-a.dev">akk1to.is.a.dev</a>.<br>
+            Contact me at <a href="mailto:contact@akk1to.is-a.dev">contact@akk1to.is-a.dev</a>
+        </div>
+    </div>
+<!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8ee246439c82d437',t:'MTczMzU1MTAwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8ee246439c82d437","version":"2024.10.5","r":1,"token":"c81624bd8bc94e79a6970ceb9c19553f","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script> -->
+<script>
+    let countdown = 6;
+    const countdowntext = document.getElementById('time');
+    const countdownFunc = setInterval(() => {
+        countdown--;
+        countdowntext.textContent = `Redirecting you to the destination page after ${countdown}...`;
+        if (countdown <= 0){
+            clearInterval(countdownFunc);
+            window.location.href = "https://calm-shovel-e24.notion.site/Competitive-Programming-Problems-1534afdebacb803dbe41e38d1913d82b?pvs=74";
+        }
+    }, 1000);
+</script>
+</body>
+</html>
